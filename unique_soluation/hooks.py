@@ -5,6 +5,38 @@ app_description = "Unique Soluation"
 app_email = "unique_soluation@gmail.com"
 app_license = "mit"
 
+app_logo_url = "/assets/unique_soluation/images/logo.png"
+
+# include js, css files in header of desk.html
+app_include_css = ["/assets/unique_soluation/css/global.css?v=1",
+                   "/assets/unique_soluation/css/header.css?v=1",
+                   "/assets/unique_soluation/css/sidebar.css?v=1",
+                   "/assets/unique_soluation/css/homeBody.css?v=1",
+                   "/assets/unique_soluation/css/workflow.css?v=1",
+                   "/assets/unique_soluation/css/form.css?v=1",
+                   "/assets/unique_soluation/css/desk-override.css?v=1"]
+app_include_js = "unique_soluation.bundle.js"
+page_js = {"card" : "public/js/cardjs"}
+doctype_tree_js =  {
+    	"Account": "public/js/account_tree.js",
+}
+# app_include_icons = "unique_soluation/icons/timeless/icons.svg"
+after_install = "unique_soluation.install.after_install.after_install"
+web_include_context = {
+    "login": "login.get_context"
+}
+
+fixtures = [
+    {"dt": "Report", "filters": [["module", "=", "Mo-Selim"]]},
+    {"dt": "Custom Field", "filters": [["module", "=", "Mo-Selim"]]},
+    {"dt": "Client Script", "filters": [["module", "=", "Mo-Selim"]]},
+]
+
+website_context = {
+	"favicon": "/assets/unique_soluation/images/logo.png",
+	"splash_image": "/assets/unique_soluation/images/logo.png",
+}
+
 # Apps
 # ------------------
 
@@ -15,7 +47,7 @@ app_license = "mit"
 # 	{
 # 		"name": "unique_soluation",
 # 		"logo": "/assets/unique_soluation/logo.png",
-# 		"title": "Unique Soluation",
+# 		"title": "Mo-Selim",
 # 		"route": "/unique_soluation",
 # 		"has_permission": "unique_soluation.api.permission.has_app_permission"
 # 	}
@@ -29,7 +61,7 @@ app_license = "mit"
 # app_include_js = "/assets/unique_soluation/js/unique_soluation.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/unique_soluation/css/unique_soluation.css"
+web_include_css = "/assets/unique_soluation/css/login.css"
 # web_include_js = "/assets/unique_soluation/js/unique_soluation.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -57,7 +89,7 @@ app_license = "mit"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+home_page = "home"
 
 # website user home page (by Role)
 # role_home_page = {
@@ -138,13 +170,10 @@ app_license = "mit"
 # Hook on document methods and events
 
 # doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
 # }
-
+# override_doctype_class = {
+#     "Employee Advance": "unique_soluation.unique_soluation.overrides.employee_advance.CustomEmployeeAdvance"
+# }
 # Scheduled Tasks
 # ---------------
 
@@ -175,7 +204,7 @@ app_license = "mit"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "unique_soluation.event.get_events"
+	
 # }
 #
 # each overriding function accepts a `data` argument;
@@ -241,4 +270,3 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
