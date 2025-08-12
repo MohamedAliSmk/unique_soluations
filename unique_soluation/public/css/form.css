@@ -395,12 +395,7 @@ select.form-control {
     padding: var(--spacing-lg);
 }
 
-/* Form Grid */
-.form-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-}
+/* Form Grid - Removed as requested */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -440,9 +435,7 @@ select.form-control {
         padding: var(--spacing-md);
     }
     
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
+    /* .form-grid removed as requested */
 }
 
 /* Loading States */

@@ -34,7 +34,7 @@ fixtures = [
 
 website_context = {
 	"favicon": "/assets/unique_soluation/images/logo.png",
-	"splash_image": "/assets/unique_soluation/images/logo.png",
+	"splash_image": "/assets/unique_soluation/images/splash.png",
 }
 
 # Apps
